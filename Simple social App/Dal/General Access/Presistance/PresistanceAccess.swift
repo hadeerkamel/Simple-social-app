@@ -53,7 +53,10 @@ class UserPresistance{
             let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
             request.predicate = NSPredicate(format: "email == %@" ,data.email)
             let matchedUsers = try PresistanceAccess.context.fetch(request)
-            
+            if matchedUsers.count == 0 {
+                callBack(false,Messages.Authentications.emailNOtFound )
+                return
+            }
             for user in matchedUsers{
                 if user.password == data.password {
                     callBack(true,String(user.id))
@@ -63,7 +66,7 @@ class UserPresistance{
             callBack(false,Messages.Authentications.wrongPassword )
             
         }catch{
-            callBack(false,Messages.Authentications.emailNOtFound )
+            print(error)
             
         }
         
