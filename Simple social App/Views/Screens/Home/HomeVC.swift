@@ -81,7 +81,7 @@ extension HomeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = postsCollectionView.dequeueReusableCell(withReuseIdentifier: UIConstants.Cells.posts.rawValue, for: indexPath) as! PostCell
-        cell.setModel(postModel: allPosts[indexPath.row])
+        cell.setModel(postModel: allPosts[allPosts.count - 1 - indexPath.row])
         
         return cell
     }

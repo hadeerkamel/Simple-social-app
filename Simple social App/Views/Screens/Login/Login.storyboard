@@ -48,6 +48,7 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46F-3a-Nft">
                                                                 <rect key="frame" x="51" y="0.0" width="217" height="30"/>
+                                                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -65,6 +66,7 @@
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-e5-Kw1">
                                                                 <rect key="frame" x="84" y="0.0" width="184" height="30"/>
+                                                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -235,7 +237,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="4ho-ra-fiA" firstAttribute="top" secondItem="j6f-1W-pj4" secondAttribute="top" constant="5" id="44Z-EU-olV"/>
                                     <constraint firstItem="jhs-eI-mxR" firstAttribute="centerX" secondItem="j6f-1W-pj4" secondAttribute="centerX" id="Er2-KS-sBE"/>
@@ -245,12 +247,22 @@
                                     <constraint firstAttribute="trailing" secondItem="4ho-ra-fiA" secondAttribute="trailing" constant="5" id="e4W-ch-92g"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12t-ry-dSc">
+                                <rect key="frame" x="285" y="31" width="24" height="24"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="ic_close"/>
+                                <connections>
+                                    <action selector="closeButtonDidTapped:" destination="lkB-7E-QAO" eventType="touchUpInside" id="MlX-xe-fSq"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="12t-ry-dSc" secondAttribute="trailing" constant="11" id="10z-NP-btM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j6f-1W-pj4" secondAttribute="trailing" id="8fm-OR-n8S"/>
                             <constraint firstItem="j6f-1W-pj4" firstAttribute="top" secondItem="fR8-EE-24s" secondAttribute="bottom" constant="23" id="95d-Pv-tCF"/>
                             <constraint firstItem="fR8-EE-24s" firstAttribute="centerX" secondItem="FHl-l1-vdR" secondAttribute="centerX" id="d4Q-kU-0kr"/>
+                            <constraint firstItem="12t-ry-dSc" firstAttribute="top" secondItem="mA4-pw-h8r" secondAttribute="bottom" constant="11" id="hfO-Xu-xiB"/>
                             <constraint firstItem="fR8-EE-24s" firstAttribute="top" secondItem="mA4-pw-h8r" secondAttribute="bottom" constant="27" id="lBI-0g-vWn"/>
                             <constraint firstItem="tTS-gR-yc3" firstAttribute="top" secondItem="j6f-1W-pj4" secondAttribute="bottom" id="sml-eJ-7wV"/>
                             <constraint firstItem="j6f-1W-pj4" firstAttribute="leading" secondItem="FHl-l1-vdR" secondAttribute="leadingMargin" id="soo-3m-JSj"/>
@@ -268,4 +280,7 @@
             <point key="canvasLocation" x="918.75" y="122.53521126760563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_close" width="24" height="24"/>
+    </resources>
 </document>

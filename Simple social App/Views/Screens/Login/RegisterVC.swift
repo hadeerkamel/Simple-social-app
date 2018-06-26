@@ -30,14 +30,17 @@ class RegisterVC: UIViewController {
     @IBAction func submitButtonDidTapped(_ sender: UIButton) {
         BLlogin.registerUser(with: (name: nameTextField.text!, email: emailTExtField.text!, Password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!)){(success,message)in
             if success{
-                //show message with registration successd
+                showMessageBanner(title:Messages.Authentications.registrationSucces, error: false)
                    //open login screen
                 self.dismiss(animated: true, completion: nil)
             }else{
-                //show message
+                showMessageBanner(title: message!, error: true)
             }
             
         }
     }
     
+    @IBAction func closeButtonDidTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

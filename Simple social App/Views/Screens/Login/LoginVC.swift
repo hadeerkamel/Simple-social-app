@@ -25,11 +25,11 @@ class LoginVC: UIViewController {
             (isSuccess,message)in
             
             if isSuccess{
-                self.dismiss(animated: false, completion: nil)
+              //  self.dismiss(animated: false, completion: nil)
                 self.present(UIConstants.Storyboards.homeStory.instantiateInitialViewController()!, animated: true, completion: nil)
                 
             }else{
-                //print the message
+                showMessageBanner(title: message!, error: true)
             }
             
             }

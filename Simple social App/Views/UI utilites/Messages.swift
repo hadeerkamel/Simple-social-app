@@ -19,8 +19,9 @@ class Messages {
         
     }
     struct Authentications{
-        static var wrongPassword     = "Wrong password"
-        static var emailNOtFound     = "This email is not exist"
+        static var wrongPassword       = "Wrong password"
+        static var emailNOtFound       = "This email is not exist"
+        static var registrationSucces  = "Congrats!\nYour data saved successfuly"
     }
     
 }

@@ -28,6 +28,10 @@ class PostCell: UICollectionViewCell {
     //MARK: - Helpers -
 
     func setModel(postModel:PostModel) {
+         postData = nil
+         ownerData = nil
+         posterData = nil
+        
         postData = postModel
         ownerData = UserPresistance.findUserWithID(id: postData.ownerID!)
         if postData.ownerID != postData.posterID{
