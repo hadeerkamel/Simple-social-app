@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PostCell" customModule="Simple_social_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="141"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="209" height="141"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poster name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14O-pw-Sul">
+                        <rect key="frame" x="3" y="3" width="96" height="21"/>
+                        <color key="backgroundColor" red="0.97089863478103577" green="0.97204140924733007" blue="0.98947999338624337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQt-X2-LRx">
+                        <rect key="frame" x="3" y="111" width="203" height="30"/>
+                        <accessibility key="accessibilityConfiguration" identifier="PostCell"/>
+                        <state key="normal" title="Share"/>
+                        <connections>
+                            <action selector="shareButtonDidTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eFi-tK-r9r"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8n-TV-fAl">
+                        <rect key="frame" x="3" y="27" width="203" height="81"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1H-I2-OJn">
+                                <rect key="frame" x="15" y="15" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a1H-I2-OJn" firstAttribute="leading" secondItem="j8n-TV-fAl" secondAttribute="leading" constant="15" id="3Ks-hy-0qd"/>
+                            <constraint firstItem="a1H-I2-OJn" firstAttribute="top" secondItem="j8n-TV-fAl" secondAttribute="top" constant="15" id="67d-5p-w4N"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="a1H-I2-OJn" secondAttribute="bottom" id="Rhm-gz-Y4s"/>
+                            <constraint firstAttribute="trailing" secondItem="a1H-I2-OJn" secondAttribute="trailing" id="t4w-Ql-lve"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="j8n-TV-fAl" firstAttribute="top" secondItem="14O-pw-Sul" secondAttribute="bottom" constant="3" id="0gb-DQ-J7f"/>
+                <constraint firstItem="NQt-X2-LRx" firstAttribute="top" secondItem="j8n-TV-fAl" secondAttribute="bottom" constant="3" id="1pl-aw-Ica"/>
+                <constraint firstItem="14O-pw-Sul" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="CA5-k4-nqu"/>
+                <constraint firstAttribute="trailing" secondItem="j8n-TV-fAl" secondAttribute="trailing" constant="3" id="HRh-qg-cEo"/>
+                <constraint firstItem="NQt-X2-LRx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="Hq1-98-ONn"/>
+                <constraint firstAttribute="trailing" secondItem="NQt-X2-LRx" secondAttribute="trailing" constant="3" id="RMo-3v-1cy"/>
+                <constraint firstAttribute="bottom" secondItem="NQt-X2-LRx" secondAttribute="bottom" id="SIb-IC-tvs"/>
+                <constraint firstItem="j8n-TV-fAl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="ifJ-pk-0DS"/>
+                <constraint firstItem="14O-pw-Sul" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="wHp-bU-b7q"/>
+            </constraints>
+            <size key="customSize" width="209" height="141"/>
+            <connections>
+                <outlet property="bodyLabel" destination="a1H-I2-OJn" id="mgB-qQ-oUI"/>
+                <outlet property="posterNameLabel" destination="14O-pw-Sul" id="PUO-fN-s1S"/>
+            </connections>
+            <point key="canvasLocation" x="104.5" y="97.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -13,9 +13,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+      //  window?.rootViewController = UIConstants.Storyboards.loginStory.instantiateInitialViewController()
+        
+        if BLlogin.userID != nil{
+            BLlogin.userInfo = UserPresistance.findUserWithID(id: BLlogin.userID!)
+            window?.rootViewController = UIConstants.Storyboards.homeStory.instantiateInitialViewController()
+            
+        }
+        
         // Override point for customization after application launch.
         return true
     }
@@ -53,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Simple_social_App")
+        let container = NSPersistentContainer(name: "AppDataModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
